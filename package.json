@@ -15,8 +15,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "filesrocket": "^0.0.4",
-    "filesrocket-amazons3": "^0.0.2",
-    "filesrocket-cloudinary": "^0.0.2",
+    "filesrocket-amazons3": "^0.0.3",
+    "filesrocket-cloudinary": "^0.0.3",
     "filesrocket-local": "^0.0.1"
   },
   "devDependencies": {
