@@ -4,9 +4,9 @@ import filesrocket from "../filesrocket";
 
 const router = Router();
 
-const controller = filesrocket.controller("local");
+const controller = filesrocket.controller("cloudinary");
 
-router.post("/files", async (req, res, next) => {
+router.post("/cloudinary/files", async (req, res, next) => {
   try {
     const files = await controller?.create(req)
     res.status(200).json(files);
@@ -15,7 +15,7 @@ router.post("/files", async (req, res, next) => {
   }
 });
 
-router.get("/files", async (req, res, next) => {
+router.get("/cloudinary/files", async (req, res, next) => {
   try {
     const files = await controller?.list(req.query);
     res.status(200).json(files);
@@ -24,7 +24,7 @@ router.get("/files", async (req, res, next) => {
   }
 });
 
-router.delete("/files", async (req, res, next) => {
+router.delete("/cloudinary/files", async (req, res, next) => {
   try {
     const { id = "" } = req.query;
   

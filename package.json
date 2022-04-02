@@ -14,7 +14,9 @@
   "dependencies": {
     "express": "^4.17.3",
     "filesrocket": "^0.0.3",
-    "filesrocket-local": "^0.0.0"
+    "filesrocket-cloudinary": "^0.0.1",
+    "filesrocket-local": "^0.0.0",
+    "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
