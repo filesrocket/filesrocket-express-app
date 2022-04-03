@@ -1,7 +1,7 @@
 {
   "name": "filesrocket-express-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple REST API using Filesrocket",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",

@@ -34,6 +34,12 @@ npm install
 npm run dev
 ```
 
+## Build
+
+```
+npm run build
+```
+
 Enter http://localhost:3030/api/local/files
 
 ## Extras
