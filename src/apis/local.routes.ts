@@ -8,7 +8,7 @@ const controller = filesrocket.controller("local");
 
 router.post("/local/files", async (req, res, next) => {
   try {
-    const files = await controller?.create(req)
+    const files = await controller?.create(req);
     res.status(200).json(files);
   } catch (error) {
     next(error);

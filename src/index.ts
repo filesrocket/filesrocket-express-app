@@ -7,6 +7,9 @@ import LocalRoutes from "./apis/local.routes";
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use("/api", LocalRoutes);
 // app.use("/api", AmazonS3Routes);
 // app.use("/api", CloudinaryRoutes);
