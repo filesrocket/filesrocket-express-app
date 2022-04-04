@@ -40,8 +40,6 @@ npm run dev
 npm run build
 ```
 
-Enter http://localhost:3030/api/local/files
-
 ## Extras
 
 As you may have noticed in the project you will see that there are files like `src/index.ts` and `src/filesrocket.ts`
