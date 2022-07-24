@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { query, Router } from "express";
 
 import filesrocket from "../filesrocket";
 
@@ -8,7 +8,10 @@ const controller = filesrocket.controller("cloudinary");
 
 router.post("/cloudinary/files", async (req, res, next) => {
   try {
-    const files = await controller?.create(req)
+    const files = await controller?.create(req, {
+      query: { path: req.query.path as string }
+    });
+    
     res.status(200).json(files);
   } catch (error) {
     next(error);

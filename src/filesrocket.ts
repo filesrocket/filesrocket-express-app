@@ -1,26 +1,26 @@
-import { Filesrocket } from "filesrocket";
+import { Filesrocket, Pagination } from "@filesrocket/core";
+import { CloudinaryFileService } from "@filesrocket/cloudinary";
+import { LocalFileService } from "@filesrocket/local";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-import { LocalFileService } from "filesrocket-local";
-// import { AmazonS3FileService } from "filesrocket-amazons3";
-// import { CloudinaryFileService } from "filesrocket-cloudinary";
-
 const filesrocket = new Filesrocket();
 
+const PAGINATION: Pagination = { default: 15, max: 50 };
+
 filesrocket.register("local", new LocalFileService({
-  pagination: { default: 15, max: 50 },
+  pagination: PAGINATION,
   directory: "uploads",
   host: "http://localhost:3030"
 }));
 
-// filesrocket.register("cloudinary", new CloudinaryFileService({
-//   pagination: { default: 15, max: 50 },
-//   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-//   api_key: process.env.CLOUDINARY_API_KEY,
-//   api_secret: process.env.CLOUDINARY_API_SECRET
-// }));
+filesrocket.register("cloudinary", new CloudinaryFileService({
+  pagination: { default: 15, max: 50 },
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
+}));
 
 // filesrocket.register("amazons3", new AmazonS3FileService({
 //   Pagination: { default: 15, max: 50 },
