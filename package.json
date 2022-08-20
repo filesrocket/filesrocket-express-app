@@ -12,12 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@filesrocket/amazons3": "^1.2.1",
+    "@filesrocket/cloudinary": "^1.2.1",
+    "@filesrocket/core": "^1.2.1",
+    "@filesrocket/local": "^1.2.1",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "filesrocket": "^0.0.4",
-    "filesrocket-amazons3": "^0.0.3",
-    "filesrocket-cloudinary": "^0.0.3",
-    "filesrocket-local": "^0.0.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
