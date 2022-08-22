@@ -53,6 +53,6 @@ If you want to be able to interact with the other services, follow the steps bel
 
 All endpoints available
 
-- **Local**: http://localhost:3030/api/local/files
-- **Cloudinary**: http://localhost:3030/api/cloudinary/files
-- **Amazon S3**: http://localhost:3030/api/amazons3/files
+- **Local**: http://localhost:3030/local/files
+- **Cloudinary**: http://localhost:3030/cloudinary/files
+- **Amazon S3**: http://localhost:3030/amazons3/files
